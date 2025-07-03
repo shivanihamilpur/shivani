@@ -13,19 +13,19 @@ jobs:
     # check out shivani project
     - name: Check out Notehub project
       uses: actions/checkout@v3
-    # check out sample project     - name: Check out Notehub JS project
-    - name: Check out Notehub JS project
+    # check out test project     - name: Check out Notehub JS project
+    - name: Check out test project
       uses: actions/checkout@v3
       with:
-        repository: shivanihamilpur/sample
-        path: ./sample
+        repository: shivanihamilpur/test
+        path: ./test
     # make a copy the of the file from Shivani repo
     - name: Copy file
       run: bash ./.github/scripts/copy-file.sh
       env:
-        DESTINATION_PATH: ./sample/
+        DESTINATION_PATH: ./test/
     # make a branch in notehub-js repo and push the copy of the openapi file there
-    - name: Push to notehub-js repo
+    - name: Push to test repo
       run: bash ./.github/scripts/push-file.sh
       env:
         BRANCH: feat/copying-file-from-shivani
