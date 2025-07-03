@@ -8,22 +8,22 @@ on:
 
 jobs:
   copy_openapi_file_to_notehub_js: 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-laBlog
     steps:
     # check out shivani project
     - name: Check out Notehub project
       uses: actions/checkout@v3
-    # check out test project     - name: Check out Notehub JS project
+    # check out Blog project     - name: Check out Notehub JS project
     - name: Check out Notehub JS project
       uses: actions/checkout@v3
       with:
-        repository: shivanihamilpur/test
-        path: ./test
+        repository: shivanihamilpur/Blog
+        path: ./Blog
     # make a copy the of the file from Shivani repo
     - name: Copy file
       run: bash ./.github/scripts/copy-file.sh
       env:
-        DESTINATION_PATH: ./test/
+        DESTINATION_PATH: ./Blog/
     # make a branch in notehub-js repo and push the copy of the openapi file there
     - name: Push to notehub-js repo
       run: bash ./.github/scripts/push-file.sh
