@@ -29,8 +29,8 @@ else
 fi
 
 git add -A .
-git config user.name github-actions
-git config user.email github-actions@github.com
+git config user.name shivanihamilpur
+git config user.email shivanihamilpur@github.com
 git commit -am "feat: Update OpenAPI file replicated from Notehub"
 git push --set-upstream origin $BRANCH
 
