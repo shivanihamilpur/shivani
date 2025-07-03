@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # move to the root test repo
-cd "./shivanihamilpur/test/"
+cd "./test"
 echo "Open root of test repo"
 
 # check if there's already a currently existing feature branch in test for this branch
