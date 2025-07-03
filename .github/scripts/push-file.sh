@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # move to the root test repo
-cd "./test"
+cd "./shivanihamilpur/test/"
 echo "Open root of test repo"
 
 # check if there's already a currently existing feature branch in test for this branch
@@ -33,3 +33,5 @@ git config user.name shivanihamilpur
 git config user.email shivanihamilpur@github.com
 git commit -am "feat: Update OpenAPI file replicated from Notehub"
 git push --set-upstream origin $BRANCH
+
+echo "Updated file successfully pushed to test repo"
