@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # File to copy from Notehub
-COPYING_FILE=./shivani/api/gitfile.txt
+COPYING_FILE=./shivani/gitfile.txt
 
 # if the file exists in Notehub, copy it to Notehub-JS repo
 if [ -f "$COPYING_FILE" ]; then
