@@ -16,7 +16,7 @@ on:
         uses: actions/checkout@v4
         with:
           repository: shivanihamilpur/sample
-          path: sample
+          path: ./sample/
 
       - name: Copy file to sample repo
         run: |
@@ -24,7 +24,7 @@ on:
 
       - name: Commit and push changes
         run: |
-          cd sample-repo
+          cd sample
           git config user.name "shivanihamilpur"
           git config user.email "shivanihamilpur@gmail.com"
           git add -A .
