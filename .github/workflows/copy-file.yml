@@ -5,28 +5,26 @@ on:
   push:
     branches: 
       - master
-      
-jobs:
+
   copy-file:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout shivani repo
         uses: actions/checkout@v4
 
-      - name: Checkout test repo
+      - name: Checkout sample repo
         uses: actions/checkout@v4
         with:
-          repository: shivanihamilpur/test
-          token: ${{ secrets.TEST }}
-          path: test
+          repository: shivanihamilpur/sample
+          path: sample
 
-      - name: Copy file to test repo
+      - name: Copy file to sample repo
         run: |
-          cp shivani/gitfile.txt ./test/
+          cp shivani/gitfile.txt ./sample/
 
       - name: Commit and push changes
         run: |
-          cd test-repo
+          cd sample-repo
           git config user.name "shivanihamilpur"
           git config user.email "shivanihamilpur@gmail.com"
           git add -A .
