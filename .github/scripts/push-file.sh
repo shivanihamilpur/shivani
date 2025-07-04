@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # move to the root test repo
-cd "./test"
+cd "./sample"
 echo "Open root of test repo"
 
 # check if there's already a currently existing feature branch in test for this branch
@@ -15,8 +15,10 @@ if [[ $EXIT_CODE == "0" ]]; then
   echo "Git branch '$BRANCH' exists in the remote repository"
   # fetch branches from test
   git fetch
+  git status
   # stash currently copied openapi.yaml
   git stash
+  git status
   # check out existing branch from test
   git checkout $BRANCH 
   # overwrite any previous file changes with current ones
